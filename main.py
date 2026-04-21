@@ -5,14 +5,17 @@ is_running = True
 products = {}
 
 while is_running:
-    item = input('Enter the item bought: ').lower()
-    price = float(input('Enter the price of the item: '))
-    products[item] = price
-    quit = input('Press "q" to quit').lower()
-    if quit == 'q':
+    item = input('Enter the item bought or Type("q" to quit): ').lower()
+    if item == 'q':
         is_running = False
-        print(products)
+    else:
+        valid_price = True
+        if valid_price == True:
+            price = float(input('Enter the price of the item: '))
 
+            products[item]= price
+            
+print(products)
 
 
     
