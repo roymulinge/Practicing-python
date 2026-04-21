@@ -11,7 +11,9 @@ while is_running:
     else:
         valid_price = True
         if valid_price == True:
-            price = float(input('Enter the price of the item: '))
+            price = input('Enter the price of the item: ')
+            if not price.isdigit():
+             print('Price should be a digit')
 
             products[item]= price
             
